@@ -1,3 +1,9 @@
+# == Route Map
+#
+#      Prefix Verb URI Pattern            Controller#Action
+# shelf_index GET  /shelf/index(.:format) shelf#index
+# 
+
 Rails.application.routes.draw do
   get 'shelf/index'
 
