@@ -1,13 +1,14 @@
 # == Route Map
 #
-#      Prefix Verb URI Pattern            Controller#Action
-# shelf_index GET  /shelf/index(.:format) shelf#index
+#       Prefix Verb URI Pattern             Controller#Action
+#         root GET  /                       stocks#index
+# stocks_index GET  /stocks/index(.:format) stocks#index
 # 
 
 Rails.application.routes.draw do
-  get 'stocks/index'
+  root 'stocks#index'
 
-  root 'shelf#index'
+  get 'stocks/index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
