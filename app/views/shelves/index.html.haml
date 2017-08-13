@@ -1,2 +1,7 @@
-%h1 Shelves#index
-%p Find me in app/views/shelves/index.html.haml
+%h1 
+  hako of 
+  = @shelf.name
+%ul
+  - @shelf.stocks.each do |stock|
+    %li
+      = stock.product.name
