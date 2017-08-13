@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170813065841) do
 
   create_table "stocks", force: :cascade do |t|
     t.string "shelf_id"
+    t.string "product_id"
     t.integer "price"
     t.integer "rest"
     t.datetime "created_at", null: false
