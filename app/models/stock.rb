@@ -11,4 +11,5 @@
 #
 
 class Stock < ApplicationRecord
+  belongs_to :shelf
 end

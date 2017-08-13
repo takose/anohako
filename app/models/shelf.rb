@@ -9,4 +9,5 @@
 #
 
 class Shelf < ApplicationRecord
+  has_many :stocks
 end
