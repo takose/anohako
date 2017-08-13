@@ -6,6 +6,8 @@
 # 
 
 Rails.application.routes.draw do
+  get 'shelves/index'
+
   root 'stocks#index'
 
   get 'stocks/index'
