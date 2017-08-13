@@ -1,14 +1,12 @@
 # == Schema Information
 #
-# Table name: stocks
+# Table name: shelves
 #
 #  id         :integer          not null, primary key
-#  shelf_id   :string
-#  price      :integer
-#  rest       :integer
+#  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Stock < ApplicationRecord
+class Shelf < ApplicationRecord
 end
