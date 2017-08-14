@@ -1,0 +1,29 @@
+.lineup {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.drink {
+  width: 120px;
+  height: 400px;
+  padding: 24px;
+  margin: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-price {
+  font-size: 36px;
+}
+
+.product-image-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.product-image {
+  margin: auto;
+}
