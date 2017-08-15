@@ -9,9 +9,11 @@ import PropTypes from 'prop-types'
 export default class Drink extends React.Component {
   static propTypes = {
     product: PropTypes.object,
-    price: PropTypes.number
+    price: PropTypes.number,
+    show: PropTypes.bool
   }
   render () {
+    if (this.props.show) {
     return (
       <div className='drink'>
         <div className='product-image-wrapper'>
@@ -22,5 +24,9 @@ export default class Drink extends React.Component {
         </div>
       </div>
     )
+    }
+    else {
+      return <div></div>
+    }
   }
 }

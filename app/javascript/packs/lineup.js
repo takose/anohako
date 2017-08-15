@@ -18,9 +18,15 @@ const Lineup = props => (
 )
 
 document.addEventListener('DOMContentLoaded', () => {
-    const node = document.getElementById('lineup')
-    const data = JSON.parse(node.getAttribute('data'))
+  const node = document.getElementById('lineup')
+  const data = JSON.parse(node.getAttribute('data'))
 
-    const drinks = data.stocks.map((d) => <Drink key={d.id} product={d.product} price={d.price} />)
-    ReactDOM.render(<Lineup key={data.id} drinks={drinks} />, node)
+  this.state = {
+    focusIdx: 0
+  }
+  const drinks = data.stocks.map((d, index) => {
+    const isFocused = (this.state.focusIdx == index) ? true : false 
+    return <Drink key={d.id} product={d.product} price={d.price} show={isFocused} />
+  })
+  ReactDOM.render(<Lineup key={data.id} drinks={drinks} />, node)
 })
