@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 
 export default class LeftComponent extends React.Component {
   static propTypes = {
-    slide: PropTypes.func
+    slide: PropTypes.func.isRequired,
+    isActive: PropTypes.bool
   }
 
   constructor (props) {
@@ -16,15 +17,24 @@ export default class LeftComponent extends React.Component {
   }
 
   render () {
-    return (
-      <div className="left-control-wrapper">
-        <div
-          className="left-control"
-          onClick={(e) => {
-            this.slide()
-          }}>
+    if (this.props.isActive) {
+      return (
+        <div className="left-control-wrapper">
+          <div
+            className="left-control"
+            onClick={(e) => {
+              this.slide()
+            }}>
+          </div>
         </div>
-      </div>
-    )
+      )
+    } else {
+      return (
+        <div className="left-control-wrapper">
+          <div className="left-control-inactive">
+          </div>
+        </div>
+      )
+    }
   }
 }

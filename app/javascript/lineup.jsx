@@ -11,7 +11,9 @@ export default class Lineup extends React.Component {
     this.slidePrevious = this.slidePrevious.bind(this)
 
     this.state = {
-      focusIdx: 0
+      focusIdx: 0,
+      isRightActive: true,
+      isLeftActive: false
     }
   }
 
@@ -20,11 +22,23 @@ export default class Lineup extends React.Component {
   }
 
   slideForward () {
+    if (this.state.focusIdx == 4) {
+      this.setState({ isRightActive: false })
+    }
+    if (!this.state.isLeftActive) {
+      this.setState({ isLeftActive: true })
+    }
     this.setState({ focusIdx: this.state.focusIdx + 1 })
   }
 
   slidePrevious () {
     this.setState({ focusIdx: this.state.focusIdx - 1 })
+    if (this.state.focusIdx <= 1) {
+      this.setState({ isLeftActive: false })
+    }
+    if (!this.state.isRightActive) {
+      this.setState({ isRightActive: true })
+    }
   }
 
   render () {
@@ -35,8 +49,8 @@ export default class Lineup extends React.Component {
 
     return (
       <div className='lineup'>
-          <RightControl slide={this.slideForward} />
-          <LeftControl slide={this.slidePrevious} />
+          <RightControl slide={this.slideForward} isActive={this.state.isRightActive} />
+          <LeftControl slide={this.slidePrevious} isActive={this.state.isLeftActive} />
         <div className='drinks'>
           {drinks}
         </div>
