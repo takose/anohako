@@ -1,2 +1,2 @@
-import "./rightControl.jsx"
-import "./leftControl.jsx"
+import "./right_control.jsx"
+import "./left_control.jsx"

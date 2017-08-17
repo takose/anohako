@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default class RightComponent extends React.Component {
+export default class LeftComponent extends React.Component {
   static propTypes = {
     slide: PropTypes.func
   }
@@ -17,9 +17,9 @@ export default class RightComponent extends React.Component {
 
   render () {
     return (
-      <div className="right-control-wrapper">
+      <div className="left-control-wrapper">
         <div
-          className="right-control"
+          className="left-control"
           onClick={(e) => {
             this.slide()
           }}>
