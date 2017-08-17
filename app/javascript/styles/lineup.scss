@@ -1,18 +1,22 @@
+#lineup {
+}
+
 .lineup {
-  width: 90%;
-  margin: 0 auto;
+}
+
+.drinks {
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .drink {
-  width: 120px;
-  height: 400px;
-  padding: 24px;
-  margin: 12px;
+  width: 500px;
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .product-price {
@@ -20,10 +24,40 @@
 }
 
 .product-image-wrapper {
+  flex-direction: column;
   display: flex;
   flex: 1;
 }
 
 .product-image {
   margin: auto;
+}
+
+.right-control-wrapper {
+  right: 0;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-control-wrapper {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-control {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 80px;
+  height: 120px;
+}
+
+.left-control {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 80px;
+  height: 120px;
 }

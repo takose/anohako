@@ -9,24 +9,11 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Drink from "../drink"
-
-const Lineup = props => (
-  <div className='lineup'>
-    {props.drinks}
-  </div>
-)
+import Lineup from "../lineup"
 
 document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('lineup')
   const data = JSON.parse(node.getAttribute('data'))
 
-  this.state = {
-    focusIdx: 0
-  }
-  const drinks = data.stocks.map((d, index) => {
-    const isFocused = (this.state.focusIdx == index) ? true : false 
-    return <Drink key={d.id} product={d.product} price={d.price} show={isFocused} />
-  })
-  ReactDOM.render(<Lineup key={data.id} drinks={drinks} />, node)
+  ReactDOM.render(<Lineup key={data.id} data={data} />, node)
 })
