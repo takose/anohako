@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Drink from "./drink"
 import RightControl from "./carousel/right_control"
 import LeftControl from "./carousel/left_control"
+import IndexControl from "./carousel/index_control"
 
 export default class Lineup extends React.Component {
   constructor (props) {
@@ -49,11 +50,14 @@ export default class Lineup extends React.Component {
 
     return (
       <div className='lineup'>
-          <RightControl slide={this.slideForward} isActive={this.state.isRightActive} />
-          <LeftControl slide={this.slidePrevious} isActive={this.state.isLeftActive} />
-        <div className='drinks'>
-          {drinks}
+        <LeftControl slide={this.slidePrevious} isActive={this.state.isLeftActive} />
+        <div className="drinks-wrapper">
+          <div className='drinks'>
+            {drinks}
+          </div>
+          <IndexControl focusIdx={this.state.focusIdx} />
         </div>
+        <RightControl slide={this.slideForward} isActive={this.state.isRightActive} />
       </div>
     )
   }
