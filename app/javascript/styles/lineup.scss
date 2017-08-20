@@ -70,28 +70,14 @@
   justify-content: center;
 }
 
-.right-control {
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 80px;
-  height: 120px;
+.carousel-control {
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0 20px;
 }
 
-.left-control {
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 80px;
-  height: 120px;
-}
-
-.right-control-inactive {
-  background-color: rgba(0, 0, 0, 0.05);
-  width: 80px;
-  height: 120px;
-}
-
-.left-control-inactive {
-  background-color: rgba(0, 0, 0, 0.05);
-  width: 80px;
-  height: 120px;
+.carousel-control-inactive {
+  color: rgba(0, 0, 0, 0.2);
+  margin: 0 20px;
 }
 
 .index-control-wrapper {

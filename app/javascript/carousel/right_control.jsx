@@ -21,17 +21,19 @@ export default class RightComponent extends React.Component {
       return (
         <div className="right-control-wrapper">
           <div
-            className="right-control"
+            className="carousel-control"
             onClick={(e) => {
               this.slide()
             }}>
+            <i className="fa fa-chevron-right fa-5x" aria-hidden="true"></i>
           </div>
         </div>
       )
     } else {
       return(
         <div className="right-control-wrapper">
-          <div className="right-control-inactive">
+          <div className="carousel-control-inactive">
+            <i className="fa fa-chevron-right fa-5x" aria-hidden="true"></i>
           </div>
         </div>
       )
