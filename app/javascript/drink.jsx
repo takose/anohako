@@ -10,16 +10,17 @@ export default class Drink extends React.Component {
 
   render () {
     if (this.props.show) {
-    return (
-      <div className='drink'>
-        <div className='product-image-wrapper'>
-          <img className='product-image' src={this.props.product.image_url} width='100%' />
+      console.log({backgroundImage: `url(${this.props.product.image_url})`})
+      return (
+        <div className='drink-wrapper'>
+          <div className='drink'>
+            <div className="drink-img" style={{backgroundImage: `url(${this.props.product.image_url})`}} />
+            <div className='price'>
+              ¥{this.props.price}
+            </div>
+          </div>
         </div>
-        <div className='product-price'>
-          {this.props.price}
-        </div>
-      </div>
-    )
+      )
     }
     else {
       return false

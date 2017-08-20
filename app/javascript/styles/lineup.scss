@@ -2,6 +2,14 @@
 }
 
 .lineup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.drinks-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
 }
 
 .drinks {
@@ -11,40 +19,52 @@
   justify-content: center;
 }
 
-.drink {
-  width: 500px;
+.drink-wrapper {
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 192px;
 }
 
-.product-price {
-  font-size: 36px;
-}
-
-.product-image-wrapper {
-  flex-direction: column;
+.drink {
+  margin: auto 0;
+  text-align: center;
   display: flex;
-  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
-.product-image {
-  margin: auto;
+.price {
+  font-size: 80px;
+  margin: 30px 0;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 5px;
+  color: #333;
+}
+
+.drink-img {
+  width: 100%;
+  height: 80%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 .right-control-wrapper {
+  padding: 192px 0;
   right: 0;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .left-control-wrapper {
-  height: 100%;
-  position: absolute;
+  padding: 192px 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
