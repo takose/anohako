@@ -24,6 +24,8 @@ default: &default
 development:
   <<: *default
   database: anohako_development
+  # username: postgres
+  # host: db
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -80,6 +82,7 @@ test:
 #
 production:
   <<: *default
-  database: anohako_production
+  # database: anohako_production
+  database: postgres
   username: anohako
   password: <%= ENV['ANOHAKO_DATABASE_PASSWORD'] %>
