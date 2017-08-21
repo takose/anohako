@@ -45,7 +45,7 @@ export default class Lineup extends React.Component {
   render () {
     const drinks = this.props.data.stocks.map((d, index) => {
       const isFocused = (this.state.focusIdx == index) ? true : false 
-      return <Drink key={d.id} product={d.product} price={d.price} show={isFocused} />
+      return <Drink key={d.id} product={d.product} price={d.price} show={isFocused} position={index} />
     })
 
     return (

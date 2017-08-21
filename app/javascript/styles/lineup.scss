@@ -37,12 +37,14 @@
   height: 100%;
 }
 
-.price {
+.buy {
   font-size: 80px;
   margin: 30px 0;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 5px;
   color: #333;
+  display: flex;
+  justify-content: center;
 }
 
 .drink-img {
@@ -51,6 +53,20 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
+}
+
+.buy-button {
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  margin: auto 20px auto 0;
+  font-size: 80px;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 5px;
 }
 
 .right-control-wrapper {
