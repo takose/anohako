@@ -1,24 +1,5 @@
-# README
+# Ano-Hako
+[Webmo](http://webmo.io/)でつくるみらいの自動販売機
+[![https://gyazo.com/953fb9b5275bcfb32a750af6ded53997](https://i.gyazo.com/953fb9b5275bcfb32a750af6ded53997.png)](https://gyazo.com/953fb9b5275bcfb32a750af6ded53997)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![https://gyazo.com/c6c4b8976dc44b3ad0c12fdc8ddf9a95](https://i.gyazo.com/c6c4b8976dc44b3ad0c12fdc8ddf9a95.jpg)](https://gyazo.com/c6c4b8976dc44b3ad0c12fdc8ddf9a95)
