@@ -69,4 +69,4 @@ RUN bundle install \
 
 EXPOSE 8000
 
-CMD ["bundle", "exec", "rails", "s"]
+CMD ["./bin/rails", "s", "--binding=0.0.0.0"]
