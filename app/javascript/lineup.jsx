@@ -50,14 +50,9 @@ export default class Lineup extends React.Component {
 
     return (
       <div className='lineup'>
-        <LeftControl slide={this.slidePrevious} isActive={this.state.isLeftActive} />
-        <div className="drinks-wrapper">
-          <div className='drinks'>
-            {drinks}
-          </div>
-          <IndexControl focusIdx={this.state.focusIdx} />
+        <div className='drinks'>
+          {drinks}
         </div>
-        <RightControl slide={this.slideForward} isActive={this.state.isRightActive} />
       </div>
     )
   }
