@@ -49,10 +49,8 @@ export default class Lineup extends React.Component {
     })
 
     return (
-      <div className='lineup'>
-        <div className='drinks'>
-          {drinks}
-        </div>
+      <div className='drinks'>
+        {drinks}
       </div>
     )
   }
