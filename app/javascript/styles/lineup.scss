@@ -1,58 +1,39 @@
 #lineup {
 }
 
-.lineup {
-  display: flex;
-  justify-content: space-between;
-}
-
-.drinks-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 auto;
-}
-
 .drinks {
-  height: 100%;
+  height: calc(100vh - 205px);
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-
-.drink-wrapper {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 192px;
+  flex-wrap: wrap;
 }
 
 .drink {
-  margin: auto 0;
-  text-align: center;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
+  width: 50%;
+  height: 50%;
+  align-items: center;
+}
+
+.drink-img {
+  width: 80%;
+  height: 80%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 .buy {
-  font-size: 80px;
+  font-size: 70px;
   margin: 30px 0;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 5px;
   color: #333;
   display: flex;
   justify-content: center;
-}
-
-.drink-img {
-  width: 100%;
-  height: 80%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
 }
 
 .buy-button {
@@ -64,59 +45,7 @@
   padding: 0;
   appearance: none;
   margin: auto 20px auto 0;
-  font-size: 80px;
+  font-size: 70px;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 5px;
-}
-
-.right-control-wrapper {
-  padding: 192px 0;
-  right: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.left-control-wrapper {
-  padding: 192px 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.carousel-control {
-  color: rgba(0, 0, 0, 0.5);
-  margin: 0 20px;
-}
-
-.carousel-control-inactive {
-  color: rgba(0, 0, 0, 0.2);
-  margin: 0 20px;
-}
-
-.index-control-wrapper {
-  margin: 30px 0;
-}
-
-.index-control {
-  display: flex;
-  justify-content: center;
-}
-
-.index {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  margin: 0 10px;
-}
-
-.focus-index {
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  margin: 0 10px;
 }
