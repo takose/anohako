@@ -1,5 +1,5 @@
 class Api::ShelvesController < ApplicationController
-  def edit
+  def update
     # NOT IMPLEMENTED
     render json: { status: 'ok' }
   end
