@@ -4,6 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  shelf_id   :string
+#  product_id :string
 #  price      :integer
 #  rest       :integer
 #  created_at :datetime         not null
