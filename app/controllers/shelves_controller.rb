@@ -18,6 +18,7 @@ class ShelvesController < ApplicationController
   end
 
   def buy
+    WebmoService.supply(params[:position].to_i)
     redirect_to root_path
   end
 end
