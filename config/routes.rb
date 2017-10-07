@@ -1,10 +1,11 @@
 # == Route Map
 #
-#         Prefix Verb URI Pattern                     Controller#Action
-#           root GET  /                               shelves#index
-#  shelves_index GET  /shelves/index(.:format)        shelves#index
-#    shelves_buy POST /shelves/buy(.:format)          shelves#buy
-# edit_api_shelf GET  /api/shelves/:id/edit(.:format) api/shelves#edit
+#        Prefix Verb  URI Pattern                Controller#Action
+#          root GET   /                          shelves#index
+# shelves_index GET   /shelves/index(.:format)   shelves#index
+#   shelves_buy POST  /shelves/buy(.:format)     shelves#buy
+#     api_shelf PATCH /api/shelves/:id(.:format) api/shelves#update
+#               PUT   /api/shelves/:id(.:format) api/shelves#update
 # 
 
 Rails.application.routes.draw do
