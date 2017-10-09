@@ -1,6 +1,12 @@
 class Api::ShelvesController < ApplicationController
   def update
     # NOT IMPLEMENTED
-    render json: { status: 'ok' }
+    if params[:position]
+      # WebmoService.supply(params[:position].to_i)
+      render json: { status: 'ok' }
+    else
+      render json: { status: 'error' }
+      head :unprocessable_entity
+    end
   end
 end
