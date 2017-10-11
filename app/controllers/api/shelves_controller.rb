@@ -1,6 +1,5 @@
 class Api::ShelvesController < ApplicationController
   def update
-    # NOT IMPLEMENTED
     if params[:position]
       # WebmoService.supply(params[:position].to_i)
       render json: { status: 'ok' }
