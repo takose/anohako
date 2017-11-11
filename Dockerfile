@@ -6,12 +6,8 @@ FROM ruby:2.4.1-alpine
 ENV BUNDLER_VERSION 1.14.6
 
 RUN gem install bundler --version "$BUNDLER_VERSION" \
-# Ignore warning: "Don't run Bundler as root."
-# @see https://github.com/docker-library/rails/issues/10
   && bundle config --global silence_root_warning 1 \
-# Ignore insecure `git` protocol for gem
   && bundle config --global git.allow_insecure true \
-# Fix nokogiri build
   && bundle config --global build.nokogiri \
     --use-system-libraries \
     --with-xml2-config=/usr/bin/xml2-config \
@@ -62,7 +58,6 @@ RUN mkdir -p \
 
 RUN bundle install \
     --path vendor/bundle \
-    # --without test development \
     --jobs 8
 
 # RUN RAILS_ENV=production bundle exec rails assets:precompile
