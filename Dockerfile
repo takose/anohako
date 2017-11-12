@@ -1,4 +1,4 @@
-FROM ruby:2.4.1-alpine
+FROM ruby:2.4.1-alpine3.6
 
 
 #  Ruby
@@ -43,25 +43,24 @@ RUN apk add --no-cache -U \
     openssh-client \
     openssl-dev \
     postgresql-dev \
+    yarn \
     zlib-dev
 
 #  App
 #-----------------------------------------------
-COPY . /app
-WORKDIR /app
-
-RUN mkdir -p \
-  log \
-  tmp/cache \
-  tmp/pids \
-  tmp/sockets
-
+COPY Gemfile /app
+COPY Gemfile.lock /app
 RUN bundle install \
     --path vendor/bundle \
     --jobs 8
 
-# RUN RAILS_ENV=production bundle exec rails assets:precompile
+COPY package.json /app
+COPY yarn.lock /app
+RUN yarn
 
-EXPOSE 8000
+COPY . /app
+WORKDIR /app
+
+# RUN RAILS_ENV=production bundle exec rails assets:precompile
 
 CMD ["./bin/rails", "s", "--binding=0.0.0.0"]
