@@ -10,3 +10,19 @@ web:
   links:
     - db
   env_file: .env
+  volumes:
+    - .:/app
+    - /app/tmp
+    - /app/log
+    - /app/vendor/bundle
+    - /app/.bundle
+
+frontend:
+  build: .
+  ports:
+    - "8080:8080"
+  env_file: .env
+  command: ['./bin/webpak-dev-server']
+  volumes:
+    - .:/app
+    - /app/node_modules
