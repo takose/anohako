@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -eu
+set -o pipefail
+
+rm -rf public/assets
+rm -rf public/packs
+
+RAILS_ENV=production bundle exec rails assets:precompile
+
+docker build -t takose/anohako .
