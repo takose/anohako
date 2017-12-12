@@ -33,6 +33,7 @@ class ShelvesController < ApplicationController
       @connect.post('/api/rotate', { speed: "90", degree: "60", absolute: "false" })
       @connect.post('/api/rotate', { speed: "90", degree: "-60", absolute: "false" })
     end
+    _ = Stock.exists?(params[:name])
     redirect_to root_path
   end
 end
