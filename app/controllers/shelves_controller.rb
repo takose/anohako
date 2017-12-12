@@ -18,6 +18,7 @@ class ShelvesController < ApplicationController
   end
 
   def buy
+    _ = Stock.exists?(params[:name])
     position = params[:position].to_i
     if position <= 1
       @connect = Faraday.new(url: "http://#{ENV['FIRST_WEBMO_NAME']}.local")
@@ -33,7 +34,7 @@ class ShelvesController < ApplicationController
       @connect.post('/api/rotate', { speed: "90", degree: "60", absolute: "false" })
       @connect.post('/api/rotate', { speed: "90", degree: "-60", absolute: "false" })
     end
-    _ = Stock.exists?(params[:name])
+    _ = Shelf.exists?(params[:name])
     redirect_to root_path
   end
 end
