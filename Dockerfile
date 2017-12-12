@@ -41,10 +41,10 @@ RUN apk add --no-cache -U \
     ncurses-dev \
     nodejs \
     openssh-client \
-    openssl-dev \
     postgresql-dev \
-    yarn \
-    zlib-dev
+    zlib-dev \
+    yarn
+    # && curl -o- -L https://yarnpkg.com/install.sh | bash
 
 #  App
 #-----------------------------------------------
