@@ -22,7 +22,7 @@ frontend:
   ports:
     - "8080:8080"
   env_file: .env
-  command: ['./bin/webpak-dev-server']
+  # command: ["./bin/webpak-dev-server"]
   volumes:
     - .:/app
     - /app/node_modules

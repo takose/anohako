@@ -48,6 +48,9 @@ RUN apk add --no-cache -U \
 
 #  App
 #-----------------------------------------------
+COPY . /app
+WORKDIR /app
+
 COPY Gemfile /app
 COPY Gemfile.lock /app
 RUN bundle install \
@@ -57,9 +60,6 @@ RUN bundle install \
 COPY package.json /app
 COPY yarn.lock /app
 RUN yarn
-
-COPY . /app
-WORKDIR /app
 
 # RUN RAILS_ENV=production bundle exec rails assets:precompile
 
