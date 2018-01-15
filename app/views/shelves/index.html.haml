@@ -1,5 +1,12 @@
 %h1.header 
   Hako of 
   = @shelf['name']
-#lineup{ data: @shelf.to_json }
-= javascript_pack_tag 'index'
+.drinks
+  - 6.times do |i|
+    .drink
+      .drink-img{id: "drink#{i}", style: "background-image: url(#{@shelf["stocks"][i]["product"]["image_url"]})"}
+      .buy= @shelf["stocks"][i]["price"]
+= javascript_include_tag 'webmo'
+= javascript_include_tag 'webmo'
+-# #lineup{ data: @shelf.to_json }
+-# = javascript_pack_tag 'index'
