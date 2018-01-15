@@ -20,16 +20,21 @@ class ShelvesController < ApplicationController
   def buy
     position = params[:position].to_i
     webmo_name = [
-      'webmoR',
-      'webmo01',
+      '',
       'webmo02',
+      'webmoR',
       'webmoL',
       'webmo-default',
-      ''
+      'webmo01'
     ]
-    @connect = Faraday.new(url: "http://#{webmo_name[position / 2]}.local")
-    if position % 2 == 0
-      @connect.post('/api/rotate', { speed: "90", degree: "30", absolute: "false" })
+    @connect = Faraday.new(url: "http://#{webmo_name[position]}.local")
+    _ = JSON.load(@connect.get('/api/sensor/rotation').body)
+    rotation = (_["rotation"].to_i / 4096.0) * 360
+    p rotation
+    if rotation < 25
+      @connect.post('/api/rotate', { speed: "90", degree: "55", absolute: "false" })
+    else
+      @connect.post('/api/rotate', { speed: "90", degree: "-55", absolute: "false" })
     end
     redirect_to root_path
   end
